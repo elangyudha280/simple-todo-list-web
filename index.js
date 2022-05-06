@@ -62,6 +62,5 @@ btn.addEventListener('click', function(e){
 
 });
 
-// 10.finish fitur add todo
 
 
