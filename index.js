@@ -20,7 +20,7 @@ btn.addEventListener('click', function(e){
 
     // 5.cek input data is empty or not
     if(input_data === ''){
-        alert('please enter some data');
+        alert('please input what you want to do');
     }
     // 6.if  not empty
    else{
@@ -58,8 +58,6 @@ btn.addEventListener('click', function(e){
             count.textContent = item.length + ' task';
         }
       }, 800);
-          
-           
         }
         })
    }
