@@ -47,12 +47,19 @@ btn.addEventListener('click', function(e){
         // 9.add fitur delete task
     container.addEventListener('click', function(e){
         if(e.target.className === 'btn-delete' ){
-            e.target.parentElement.remove();
+            // 10.add animate delete
+
+            e.target.parentElement.classList.add('item-delete');
+            
+      setTimeout(() => {
+        e.target.parentElement.remove();
+        count.textContent = item.length + ' tasks';
+        if(item.length < 2){
+            count.textContent = item.length + ' task';
+        }
+      }, 800);
           
-            count.textContent = item.length + ' tasks';
-            if(item.length < 2){
-                count.textContent = item.length + ' task';
-            }
+           
         }
         })
    }
