@@ -133,6 +133,15 @@ div.info {
   line-height: 1m;
 }
 
+.icon-delete-modal {
+  font-size: 6em;
+  text-align: center;
+  display: block;
+}
+.btn-content {
+  display: inline-block;
+}
+
 @media screen and (max-height: 420px) {
   .template {
     position: relative;

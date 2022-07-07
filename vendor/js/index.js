@@ -11,6 +11,8 @@ const btn = document.querySelector('.btn-data');
 let container = document.querySelector('.todo-item');
 
 
+// let item = document.getElementsByClassName('item');
+// let count = document.querySelector('.count');
 
 // 3.add event for btn
 btn.addEventListener('click', function(e){
@@ -28,9 +30,11 @@ btn.addEventListener('click', function(e){
 
             let el = ` <div class="item">
                         <p>${input_data}</p>
-                        <button class="btn-delete">
+                        <button class="btn-delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa-solid fa-trash"></i>
                         </button>
+
+                        
                     </div>` 
         
         // 7.append element to todo-item
@@ -43,25 +47,35 @@ btn.addEventListener('click', function(e){
         if(item.length > 1){
             count.textContent = item.length + ' tasks';
         }
-      
+
+        let button_modal = document.querySelector('.delete-modal-button')
+    
 
 
         // 9.add fitur delete task
     container.addEventListener('click', function(e){
         if(e.target.className === 'btn-delete' ){
             // 10.add animate delete
+           button_modal.addEventListener('click',function(el){
+          
+            setTimeout(() => {
+                e.target.parentElement.classList.add('item-delete')
+            }, 400);
+            setTimeout(() => {
+                e.target.parentElement.remove();
+                count.textContent = item.length + ' tasks';
+                if(item.length < 2){
+                    count.textContent = item.length + ' task';
+                }
+              }, 1000);
+           })
 
-            e.target.parentElement.classList.add('item-delete');
-            
-      setTimeout(() => {
-        e.target.parentElement.remove();
-        count.textContent = item.length + ' tasks';
-        if(item.length < 2){
-            count.textContent = item.length + ' task';
+    
         }
-      }, 800);
-        }
+     
+           
         })
+    
    }
 
  
@@ -69,6 +83,3 @@ btn.addEventListener('click', function(e){
    
 
 });
-
-
-
