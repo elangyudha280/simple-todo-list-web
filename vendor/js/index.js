@@ -56,7 +56,7 @@ btn.addEventListener('click', function(e){
     container.addEventListener('click', function(e){
         if(e.target.className === 'btn-delete' ){
             // 10.add animate delete
-           button_modal.addEventListener('click',function(el){
+           button_modal.addEventListener('click',function(){
           
             setTimeout(() => {
                 e.target.parentElement.classList.add('item-delete')
