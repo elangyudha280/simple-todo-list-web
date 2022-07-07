@@ -17,7 +17,7 @@ btn.addEventListener('click', function(e){
 
     //4. selection input
     let input_data = document.querySelector('.input-data').value;
-
+    
     // 5.cek input data is empty or not
     if(input_data === ''){
         alert('please input what you want to do');
@@ -27,12 +27,12 @@ btn.addEventListener('click', function(e){
                 // 7.create element
 
             let el = ` <div class="item">
-            <p>${input_data}</p>
+            <p class="data">${input_data}</p>
             <button class="btn-delete">
                 <i class="fa-solid fa-trash"></i>
             </button>
-        </div>`
-
+        </div>` 
+        
         // 7.append element to todo-item
         container.innerHTML += el;
         
@@ -44,6 +44,8 @@ btn.addEventListener('click', function(e){
             count.textContent = item.length + ' tasks';
         }
       
+
+
         // 9.add fitur delete task
     container.addEventListener('click', function(e){
         if(e.target.className === 'btn-delete' ){
@@ -62,8 +64,9 @@ btn.addEventListener('click', function(e){
         })
    }
 
-   
+ 
     
+   
 
 });
 
