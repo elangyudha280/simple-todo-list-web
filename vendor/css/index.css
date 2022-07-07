@@ -98,8 +98,9 @@
   font-family: 'Open Sans', sans-serif;
   color: rgb(146, 150, 156);
   font-weight: 700;
+  height: 100%;
   display: flex;
-  justify-items: left;
+  justify-content: left;
   align-items: center;
   padding-left: 0.5em;
   overflow: auto;
@@ -120,9 +121,16 @@
   opacity: 1;
 }
 
+div.info {
+  display: flex;
+  justify-content: left;
+  /* border: 1px solid red; */
+  align-items: center;
+}
 .info p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
+  line-height: 1m;
 }
 
 @media screen and (max-height: 420px) {

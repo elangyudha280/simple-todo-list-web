@@ -27,11 +27,11 @@ btn.addEventListener('click', function(e){
                 // 7.create element
 
             let el = ` <div class="item">
-            <p class="data">${input_data}</p>
-            <button class="btn-delete">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>` 
+                        <p>${input_data}</p>
+                        <button class="btn-delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>` 
         
         // 7.append element to todo-item
         container.innerHTML += el;
